@@ -115,3 +115,77 @@ html {
 #featured table td a.logo:hover {
 	color: rgb(0, 255, 0);
 }
+
+/*Copyright Styling*/
+
+#copyright {
+	text-align: center;
+	color: green;
+	font-weight: 400;
+	font-family: sans-serif;
+	margin-top: 50px;
+	text-transform: uppercase;
+}
+
+#copyright h4:before {
+	content: "";
+	display: inline-block;
+	position: relative;
+	right: 0;
+	top: -5px;
+	height: 2px;
+	width: 33%;
+	background: rgb(0, 255, 0);
+	margin-right: 15px;
+}
+
+#copyright h4 {
+	font-size: 20px;
+	color: rgb(0, 255, 0);
+}
+
+#copyright h4:after {
+	content: "";
+	display: inline-block;
+	position: relative;
+	left: 0;
+	top: -5px;
+	height: 2px;
+	width: 33%;
+	background: rgb(0, 255, 0);
+	clear: both;
+	margin-left: 15px;
+}
+
+#copyright h5 {
+	font-size: 12px;
+}
+
+#copyright a {
+	color: green;
+	font-size: 11px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#copyright a:hover {
+	color: rgb(0, 255, 0);
+}
+
+#copyright h6 {
+	font-size: 10px;
+}
+
+/*Formatting for all devices*/
+
+@media screen and (max-width: 600px) {
+	#navbar ul li,
+	#navbar ul li:last-child {
+		float: none;
+	}
+
+	#copyright h4:before,
+	#copyright h4:after {
+		display: none;
+	}
+}
