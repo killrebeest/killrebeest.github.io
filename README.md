@@ -3,7 +3,7 @@
 <h1 align="center"> Phantom  </h1>
 <p align="center">
 <a href="https://github.com/killrebeest/killrebeest.github.io/blob/main/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/Simpleboy353/REAPER-2.0?style=for-the-badge"></a>
-<a href="https://github.com/killrebeest/killrebeest.github.io/stargazers"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/killebeest/killrebeest.github.io?style=for-the-badge"></a> 
+<a href="https://github.com/killrebeest/killrebeest.github.io/stargazers"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/killrebeest/killrebeest.github.io?style=for-the-badge"></a> 
 <a href="https://github.com/killrebeest/killrebeest.github.io/network"><img alt="GitHub Forks" src="https://img.shields.io/github/forks/killrebeest/killrebeest.github.io?style=for-the-badge"></a>
 <a href="https://discord.gg/adfhvTas7u"><img alt="Support Server" src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white"></a>
 </p>
