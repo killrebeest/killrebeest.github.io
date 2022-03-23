@@ -1,0 +1,55 @@
+/*HTML Styling*/
+
+html {
+	background-image: radial-gradient(circle, rgb(61, 61, 61), rgb(44, 44, 44), rgb(31, 31, 31));
+}
+
+::selection {
+	color: inherit;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+/*Navbar Styling*/
+
+#navbar ul {
+	list-style-type: none;
+	margin: 0;
+	background-color: transparent;
+	overflow: hidden;
+	padding: 0;
+	margin-bottom: 15px;
+}
+
+#navbar li {
+	float: left;
+}
+
+#navbar li:last-child {
+	float: right;
+}
+
+#navbar ul li a {
+	text-transform: uppercase;
+	font: 14px / 1.4 sans-serif;
+	font-family: "Barlow", sans-serif;
+	font-weight: 700;
+	font-size: 17px;
+	color: green;
+	padding: 8px;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+}
+
+#navbar ul li a:hover {
+	color: rgb(0, 255, 0);
+}
+
+.current {
+	text-decoration: none !important;
+	border-bottom: rgb(0, 255, 0) 0.125em solid !important;
+	text-decoration-color: rgb(0, 255, 0) !important;
+	text-decoration-thickness: 0.125em !important;
+	text-underline-offset: 1.5px !important;
+	color: rgb(0, 255, 0) !important;
+}
