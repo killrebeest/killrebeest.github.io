@@ -53,3 +53,65 @@ html {
 	text-underline-offset: 1.5px !important;
 	color: rgb(0, 255, 0) !important;
 }
+
+/*Feature Styling*/
+
+#featured table {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	background-image: url("../images/featured-background.gif");
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 50px;
+	padding-right: 50px;
+	border-style: solid;
+	border-color: rgb(0, 255, 0);
+	border-bottom-right-radius: 180px;
+	border-top-left-radius: 180px;
+	border-bottom-left-radius: 180px;
+	border-top-right-radius: 180px;
+}
+
+#featured table td {
+	text-align: center;
+	list-style-type: none;
+	background-color: transparent;
+	padding: 0;
+	margin-top: 15px;
+}
+
+#featured table td a {
+	text-transform: uppercase;
+	font: 14px / 1.4 sans-serif;
+	font-family: "Barlow", sans-serif;
+	font-weight: 700;
+	font-size: 17px;
+	color: green;
+	padding: 8px;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+}
+
+#featured table td a:hover {
+	color: rgb(0, 255, 0);
+}
+
+#featured table td a.logo {
+	text-transform: uppercase;
+	font: 14px / 1.4 sans-serif;
+	font-family: "Barlow", sans-serif;
+	font-weight: 700;
+	font-size: 25px;
+	color: rgb(0, 255, 0);
+	padding: 8px;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	text-shadow: 0 0 7px #00ff00, 0 0 7px #00ff00;
+}
+
+#featured table td a.logo:hover {
+	color: rgb(0, 255, 0);
+}
