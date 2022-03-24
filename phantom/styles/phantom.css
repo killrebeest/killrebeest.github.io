@@ -16,6 +16,10 @@ h3 {
 	color: rgb(0, 160, 0);
 	text-align: center;
 	font-size: 20px;
+	max-width: 50vw;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
 }
 
 h3 a {
@@ -26,9 +30,4 @@ h3 a {
 
 h3 a:hover {
 	color: rgb(0, 255, 0);
-}
-
-details:hover {
-	color: rgb(0, 255, 0);
-	cursor: pointer;
 }

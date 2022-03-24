@@ -22,14 +22,12 @@ h3 {
 	transform: translate(-50%);
 }
 
-a {
+h2 a {
 	color: inherit;
 	font-size: inherit;
-	text-decoration: underline;
-	text-underline-position: below;
-	-ms-text-underline-position: under;
+	text-decoration: none;
 }
 
-a:hover {
+h2 a:hover {
 	color: rgb(0, 255, 0);
 }
