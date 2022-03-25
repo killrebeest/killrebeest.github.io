@@ -1,0 +1,33 @@
+/*Phantom Page Styling*/
+
+h1 {
+	color: rgb(0, 200, 0);
+	text-align: center;
+	font-size: 50px;
+}
+
+h2 {
+	color: rgb(0, 180, 0);
+	text-align: center;
+	font-size: 40px;
+}
+
+h3 {
+	color: rgb(0, 160, 0);
+	text-align: center;
+	font-size: 20px;
+	max-width: 50vw;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+h2 a {
+	color: inherit;
+	font-size: inherit;
+	text-decoration: none;
+}
+
+h2 a:hover {
+	color: rgb(0, 255, 0);
+}
