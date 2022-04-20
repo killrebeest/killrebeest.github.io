@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Phantom</title>
+        <link rel="icon" href="../images/phantom.png">
+        <meta charset="UTF-8">
+        <style>
+            html {
+                background-image: radial-gradient(circle, rgb(61, 61, 61), rgb(44, 44, 44), rgb(31, 31, 31));
+            }
+
+            ::selection {
+                color: inherit;
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+
+            h1 {
+                position: absolute;
+                left: 50%;
+                bottom: 50%;
+                transform: translate(-50%);
+                color: green;
+                font-size: 80px;
+            }
+
+            p {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%);
+                color: green;
+                font-size: 40px;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            let responses;
+            let apiKey = '1be9a6884abd4c3ea143b59ca317c6b2';
+
+            $.getJSON('https://ipgeolocation.abstractapi.com/v1/?api_key=' + apiKey, function(data) {
+                responses = data.ip_address
+            });
+
+            setTimeout(() => {
+                var element = document.getElementById('ip');
+	            element.innerHTML =  responses;
+            }, 250)
+        </script>
+    </head>
+    <body>
+        <h1>Phantom IP Logger</h1>
+        <p id="ip"></p>
+    </body>
+</html>
