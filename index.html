@@ -1,43 +1,78 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Phantom</title>
-        <link rel="icon" href="phantom/images/phantom.png">
-        <meta charset="UTF-8">
-        <style>
-            ::selection {
-                color: inherit;
-                background-color: rgba(255, 255, 255, 0.5);
-            }
-            
-            html {
-                background-image: radial-gradient(circle, rgb(61, 61, 61), rgb(44, 44, 44), rgb(31, 31, 31));
-            }
-
-            a {
-                text-align: center;
-                color: green;
-                font-size: 80px;
-                text-decoration: none;
-                margin: 0;
-                position: absolute;
-                bottom: 50%;
-                left: 50%;
-                -ms-transform: translate(-50%);
-                transform: translate(-50%);
-                -webkit-transition: all 1s ease;
-                -moz-transition: all 1s ease;
-                -o-transition: all 1s ease;
-                transition: all 1s ease;
-            }
-
-            a:hover {
-                color: rgb(0, 255, 0);
-                letter-spacing: 10px;
-            }
-        </style>
+        <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-simple-sun-sky@^1.2.2/simple-sun-sky.js"></script>
     </head>
     <body>
-        <a href="phantom/index.html">Continue.</a>
+        <a-scene>
+            <a-camera>
+                <a-cursor></a-cursor>
+            </a-camera>
+            
+            <a-simple-sun-sky sun-position="0.7 0.4 -1"></a-simple-sun-sky>
+            <a-entity light="type: ambient; color: #BBB"></a-entity>
+            <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="0.7 0.4 -1"></a-entity>
+            
+            <a-plane geometry="primitive: plane; height: 100; width: 100"
+                position="0 0 0" rotation="-90 0 0"
+                material="shader: flat; src: url(https://codehs.com/uploads/7539eac92f8b2889c2ab18298be3cbc6); repeat: 100 100">
+            </a-plane>
+            
+            <a-sphere id="e" radius="0.5" position="0 2 -3" rotation="0 -90 0"
+                material="shader: flat; src: url(https://codehs.com/uploads/6169e4ebeb6bd79c32eb937f07b34dff)">
+            </a-sphere>
+            
+            <a-box depth="0.3" width="0.3" height="0.1" position="0 0.5 -2"
+                color="grey">
+            </a-box>
+            
+            <a-sphere radius="0.1" position="0 0.55 -2" color="red" id="nuke">
+            </a-sphere>
+            
+            <a-text position="-1 1 -2.5" color="black" value="press for free vbucks">
+            </a-text>
+            
+            <script>
+                document.querySelector('#nuke').addEventListener('click', () => {
+                    var sceneEl = document.querySelector('a-scene');
+                    
+                    var entityEl = document.createElement('a-entity');
+                    
+                    entityEl.setAttribute('position', {x: 0, y: 2, z: -3});
+                    entityEl.setAttribute('material', 'color', '#FFA500');
+                    
+                    entityEl.setAttribute('geometry', {
+                        primitive: 'sphere',
+                        radius: 0.5
+                    });
+                    
+                    entityEl.setAttribute('animation', {
+                       property: 'scale',
+                       from: '0 0 0',
+                       to: '100 100 100',
+                       dur: '10000'
+                    });
+                    
+                    sceneEl.appendChild(entityEl);
+                    
+                    var musky = document.querySelector('#e');
+                    musky.setAttribute('radius', 0.01)
+                    
+                    setTimeout(() => {
+                        var sky = document.querySelector('a-simple-sun-sky');
+                        sky.setAttribute('fog-color', '#FFBF6E');
+                        sky.setAttribute('light-color','#FFA500');
+                        sky.setAttribute('dark-color','#FF8C00');
+                        
+                        var grass = document.querySelector('a-plane');
+                        grass.setAttribute('color', '#FF8C00');
+                        
+                        var text = document.querySelector('a-text');
+                        text.setAttribute('value', 'lol get scammed nerd');
+                    }, 2200)
+                });
+            </script>
+        </a-scene>
     </body>
 </html>
